@@ -1,8 +1,8 @@
 //
 //  ViewController.swift
 //  LootLogger
-//
-//  Created by Gabes mac on 3/20/26.
+//  Created by Brigitte on 9/03/26
+// Continuation of LootLogger Project.
 //
 
 import UIKit

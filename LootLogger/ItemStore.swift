@@ -1,9 +1,10 @@
 //
 //  ItemStore.swift
 //  LootLogger
+//  Created by Brigitte on 9/03/26
+// Continuation of LootLogger Project.
 //
-//  Created by Gabes mac on 3/20/26.
-//
+
 import UIKit
 
 class ItemStore {
