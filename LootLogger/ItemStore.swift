@@ -32,9 +32,19 @@ class ItemStore {
         allItems.insert(movedItem, at: destinationIndex)
     }
     
+    func saveChanges() -> Bool {
+
+        let encoder = PropertyListEncoder()
+        let data = encoder.encode(allItems)
+
+        return false
+    }
+
+
 //    init() {
 //        for _ in 0..<50 {
 //            createItem()
 //        }
 //    }
+    
 }
