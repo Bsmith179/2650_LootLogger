@@ -33,10 +33,12 @@ class ItemStore {
     }
     
     func saveChanges() -> Bool {
-
-        let encoder = PropertyListEncoder()
-        let data = encoder.encode(allItems)
-
+        do {
+            let encoder = PropertyListEncoder()
+            let data = try encoder.encode(allItems)
+        } catch let encodingError {
+            print("Error encoding allItems: \(encodingError)")
+    }
         return false
     }
 
