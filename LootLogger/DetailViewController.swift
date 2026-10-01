@@ -17,6 +17,27 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var dateLabel: UILabel!
     
+    @IBAction func choosePhotoSource(_ sender: UIBarButtonItem) {
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        alertController.modalPresentationStyle = .popover
+        alertController.popoverPresentationController?.barButtonItem = sender
+    
+        let cameraAction = UIAlertAction(title: "Camera", style: .default){ _ in
+        print("Present Camera")
+        }
+        alertController.addAction(cameraAction)
+        
+        let photoLibraryAction = UIAlertAction(title: "Photo Library", style: .default){ _ in
+        print("PresentPhoto Librry")
+        }
+        alertController.addAction(photoLibraryAction)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        
+        present(alertController, animated: true, completion: nil)
+    }
+    
     var item: Item! {
         didSet {
             navigationItem.title = item.name
