@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bC0-vd-a72">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="25098" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bC0-vd-a72">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="25073"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -89,7 +89,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="FeN-1A-qf9">
-                                <rect key="frame" x="8" y="180" width="377" height="596"/>
+                                <rect key="frame" x="8" y="180" width="377" height="560"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="uzj-ZV-rTp">
                                         <rect key="frame" x="0.0" y="0.0" width="377" height="34"/>
@@ -149,7 +149,7 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Date Created" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ymn-9r-9Sz">
-                                        <rect key="frame" x="0.0" y="126" width="377" height="470"/>
+                                        <rect key="frame" x="0.0" y="126" width="377" height="434"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -160,14 +160,28 @@
                                     <constraint firstItem="V0y-b3-E3Y" firstAttribute="leading" secondItem="dGn-Bx-FUc" secondAttribute="leading" id="tDi-uN-iEm"/>
                                 </constraints>
                             </stackView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NDP-i9-8ck">
+                                <rect key="frame" x="8" y="740" width="377" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="camera" id="Lej-Bz-jwC">
+                                        <connections>
+                                            <action selector="choosePhotoSource:" destination="hde-7Z-3Tz" id="MGB-V2-PnH"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="d3H-OC-1ZB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="d3H-OC-1ZB" firstAttribute="bottom" secondItem="FeN-1A-qf9" secondAttribute="bottom" constant="8" id="1LO-m5-hSJ"/>
                             <constraint firstItem="FeN-1A-qf9" firstAttribute="top" secondItem="d3H-OC-1ZB" secondAttribute="top" constant="8" id="AJP-25-lJ3"/>
+                            <constraint firstItem="NDP-i9-8ck" firstAttribute="leading" secondItem="FeN-1A-qf9" secondAttribute="leading" id="JUt-6U-wH9"/>
+                            <constraint firstItem="NDP-i9-8ck" firstAttribute="bottom" secondItem="d3H-OC-1ZB" secondAttribute="bottom" id="KJi-I3-B2i"/>
+                            <constraint firstItem="NDP-i9-8ck" firstAttribute="top" secondItem="FeN-1A-qf9" secondAttribute="bottom" id="TlP-vV-RDo"/>
+                            <constraint firstItem="d3H-OC-1ZB" firstAttribute="bottom" secondItem="NDP-i9-8ck" secondAttribute="bottom" id="aw3-ho-e9g"/>
                             <constraint firstItem="d3H-OC-1ZB" firstAttribute="trailing" secondItem="FeN-1A-qf9" secondAttribute="trailing" constant="8" id="m0M-98-Lwx"/>
+                            <constraint firstItem="NDP-i9-8ck" firstAttribute="trailing" secondItem="FeN-1A-qf9" secondAttribute="trailing" id="rWC-Yg-lbs"/>
                             <constraint firstItem="FeN-1A-qf9" firstAttribute="leading" secondItem="d3H-OC-1ZB" secondAttribute="leading" constant="8" id="zM8-hz-V6y"/>
                         </constraints>
                         <connections>
@@ -211,7 +225,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="plus.app" catalog="system" width="128" height="114"/>
+        <image name="plus.app" catalog="system" width="128" height="119"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
