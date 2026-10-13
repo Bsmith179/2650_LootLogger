@@ -149,11 +149,14 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Date Created" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ymn-9r-9Sz">
-                                        <rect key="frame" x="0.0" y="126" width="377" height="434"/>
+                                        <rect key="frame" x="0.0" y="125.99999999999999" width="377" height="20.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="248" verticalCompressionResistancePriority="748" translatesAutoresizingMaskIntoConstraints="NO" id="pyd-Lg-lLE">
+                                        <rect key="frame" x="0.0" y="154.33333333333326" width="377" height="405.66666666666674"/>
+                                    </imageView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="dGn-Bx-FUc" firstAttribute="leading" secondItem="lWl-5M-KbG" secondAttribute="leading" id="eMn-SY-a2k"/>
@@ -191,6 +194,7 @@
                     <navigationItem key="navigationItem" id="p0p-3L-vlL"/>
                     <connections>
                         <outlet property="dateLabel" destination="ymn-9r-9Sz" id="oOT-bR-qlO"/>
+                        <outlet property="imageView" destination="pyd-Lg-lLE" id="dQj-wR-5mK"/>
                         <outlet property="nameField" destination="YoH-fc-w8o" id="j7B-zf-ydD"/>
                         <outlet property="serialNumberField" destination="7Cx-dG-J94" id="RDe-Yt-9vS"/>
                         <outlet property="valueField" destination="sRB-2j-kAV" id="euA-1h-Nbb"/>
