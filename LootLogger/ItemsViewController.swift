@@ -11,6 +11,7 @@ class ItemsViewController: UITableViewController
 {
     
     var itemStore: ItemStore!
+    var imageStore: ImageStore!
     
     @IBAction func addNewItem(_ sender: UIBarButtonItem) {
         let newItem = itemStore.createItem()
@@ -22,14 +23,14 @@ class ItemsViewController: UITableViewController
         
     }
     
-
+    
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         
         navigationItem.leftBarButtonItem = editButtonItem
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -42,7 +43,7 @@ class ItemsViewController: UITableViewController
         super.viewWillAppear(animated)
         tableView.reloadData()
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return itemStore.allItems.count
     }
@@ -50,7 +51,7 @@ class ItemsViewController: UITableViewController
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath) as! ItemCell
         
-    
+        
         let item = itemStore.allItems[indexPath.row]
         cell.nameLabel.text = item.name
         cell.serialNumberLabel.text = item.serialNumber
@@ -69,6 +70,7 @@ class ItemsViewController: UITableViewController
         if editingStyle == .delete {
             let itemToDelete = itemStore.allItems[indexPath.row]
             itemStore.removeItem(itemToDelete)
+            imageStore.deleteImage(forKey: itemToDelete.itemKey)
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
     }
@@ -84,6 +86,7 @@ class ItemsViewController: UITableViewController
                 let item = itemStore.allItems[row]
                 let detailViewController = segue.destination as! DetailViewController
                 detailViewController.item = item
+                detailViewController.imageStore = imageStore
                 
             }
         default :
@@ -91,6 +94,6 @@ class ItemsViewController: UITableViewController
         }
     }
     
-
+    
 }
 

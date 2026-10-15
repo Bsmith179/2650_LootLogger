@@ -12,12 +12,14 @@ class Item: Equatable, Codable {
     var valueInDollars: Int
     var serialNumber: String?
     var dateCreated: Date
+    let itemKey: String
     
     init(name: String, serialNumber: String? = nil, valueInDollars: Int) {
         self.name = name
         self.valueInDollars = valueInDollars
         self.serialNumber = serialNumber
         self.dateCreated = Date()
+        self.itemKey = UUID().uuidString
     }
     
     static func == (lhs: Item, rhs: Item) -> Bool {
