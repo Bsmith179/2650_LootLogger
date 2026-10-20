@@ -24,10 +24,9 @@ class ItemsViewController: UITableViewController
     }
     
     
-    
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        
+        editButtonItem.tintColor = UIColor(named: "Brand Accent Color")
         navigationItem.leftBarButtonItem = editButtonItem
     }
     

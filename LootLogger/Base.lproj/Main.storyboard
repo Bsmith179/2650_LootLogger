@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="25073"/>
         <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,7 +17,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="QL4-cS-cLa">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="Primary Brand Fill Color"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemCell" rowHeight="65" id="YnQ-RX-gsu" customClass="ItemCell" customModule="LootLogger" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="50" width="393" height="65"/>
@@ -57,6 +58,7 @@
                                         <constraint firstItem="Cf2-4l-GQE" firstAttribute="top" secondItem="Dfn-RI-mWo" secondAttribute="bottom" constant="23" id="gcN-1N-Scq"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" name="Primary Brand Fill Color"/>
                                 <connections>
                                     <outlet property="nameLabel" destination="Dfn-RI-mWo" id="qbI-Ud-J0z"/>
                                     <outlet property="serialNumberLabel" destination="Cf2-4l-GQE" id="UnO-ot-ggP"/>
@@ -73,6 +75,7 @@
                     <navigationItem key="navigationItem" title="LootLogger" id="9gf-FJ-Vna">
                         <barButtonItem key="rightBarButtonItem" title="Add" id="BfU-TL-iCB">
                             <imageReference key="image" image="plus.app" catalog="system" symbolScale="large"/>
+                            <color key="tintColor" name="Brand Accent Color"/>
                             <connections>
                                 <action selector="addNewItem:" destination="ygS-Pr-YQ8" id="5z0-3F-HJQ"/>
                             </connections>
@@ -108,6 +111,7 @@
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YoH-fc-w8o">
                                                         <rect key="frame" x="53" y="0.0" width="340" height="34"/>
+                                                        <color key="backgroundColor" systemColor="tertiarySystemFillColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
@@ -120,13 +124,14 @@
                                                 <rect key="frame" x="0.0" y="42" width="393" height="34"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Serial" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dGn-Bx-FUc">
-                                                        <rect key="frame" x="0.0" y="0.0" width="42.333333333333336" height="34"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="45" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Cx-dG-J94">
-                                                        <rect key="frame" x="50.333333333333343" y="0.0" width="342.66666666666663" height="34"/>
+                                                        <rect key="frame" x="53" y="0.0" width="340" height="34"/>
+                                                        <color key="backgroundColor" systemColor="tertiarySystemFillColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
@@ -139,13 +144,14 @@
                                                 <rect key="frame" x="0.0" y="84" width="393" height="34"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lWl-5M-KbG">
-                                                        <rect key="frame" x="0.0" y="0.0" width="42" height="34"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="45" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sRB-2j-kAV">
-                                                        <rect key="frame" x="50" y="0.0" width="343" height="34"/>
+                                                        <rect key="frame" x="53" y="0.0" width="340" height="34"/>
+                                                        <color key="backgroundColor" systemColor="tertiarySystemFillColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                         <connections>
@@ -162,7 +168,9 @@
                                             </label>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstItem="7Cx-dG-J94" firstAttribute="leading" secondItem="sRB-2j-kAV" secondAttribute="leading" id="Vtw-pa-2wP"/>
                                             <constraint firstItem="dGn-Bx-FUc" firstAttribute="leading" secondItem="lWl-5M-KbG" secondAttribute="leading" id="eMn-SY-a2k"/>
+                                            <constraint firstItem="YoH-fc-w8o" firstAttribute="leading" secondItem="7Cx-dG-J94" secondAttribute="leading" id="n9V-9Y-tgk"/>
                                             <constraint firstItem="V0y-b3-E3Y" firstAttribute="leading" secondItem="dGn-Bx-FUc" secondAttribute="leading" id="tDi-uN-iEm"/>
                                         </constraints>
                                     </stackView>
@@ -176,15 +184,17 @@
                                 <rect key="frame" x="0.0" y="732" width="393" height="44"/>
                                 <items>
                                     <barButtonItem systemItem="camera" id="Lej-Bz-jwC">
+                                        <color key="tintColor" name="Brand Accent Color"/>
                                         <connections>
                                             <action selector="choosePhotoSource:" destination="hde-7Z-3Tz" id="MGB-V2-PnH"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
+                                <color key="barTintColor" name="Secondary Brand Fill Color"/>
                             </toolbar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="d3H-OC-1ZB"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="Primary Brand Fill Color"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="NDP-i9-8ck" firstAttribute="leading" secondItem="PG8-eZ-ez7" secondAttribute="leadingMargin" id="I03-OT-Lwb"/>
@@ -225,6 +235,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="svv-iS-qMg">
                         <rect key="frame" x="0.0" y="118" width="393" height="54"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" name="Secondary Brand Fill Color"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -236,10 +247,20 @@
             <point key="canvasLocation" x="-92.36641221374046" y="70.422535211267615"/>
         </scene>
     </scenes>
+    <color key="tintColor" name="Brand Accent Color"/>
     <resources>
         <image name="plus.app" catalog="system" width="128" height="119"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <namedColor name="Brand Accent Color">
+            <color red="0.94117647058823528" green="0.30980392156862746" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Primary Brand Fill Color">
+            <color red="0.97254901960784312" green="0.97254901960784312" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Secondary Brand Fill Color">
+            <color red="0.92549019607843142" green="0.92156862745098034" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="tertiarySystemFillColor">
+            <color red="0.46274509800000002" green="0.46274509800000002" blue="0.50196078430000002" alpha="0.12" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
